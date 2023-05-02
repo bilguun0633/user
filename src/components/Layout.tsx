@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
-import Head from "next/head";
-import Navbar from "./Navbar";
+import Head from "./Head";
+import Sidebar from "./Sidebar";
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,16 +8,16 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="bg-cyan-400">
+    <div>
       <div>
         <Head>
           <meta />
         </Head>
         <main>
           <div className="flex flex-row ">
-            <Navbar />
+            <Sidebar />
 
-            <div className="w-9/12 bg-slate-300 ">{children}</div>
+            <div className="w-9/12">{children}</div>
           </div>
         </main>
       </div>
